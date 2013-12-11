@@ -6,3 +6,12 @@ def home(request):
 
 def sobre(request):
 	return render(request, 'sobre.html')
+
+def ListaCursos(request):
+	return render(request, 'cursos.html')	
+
+#from models import CadastraCurso
+
+#def ListaCurso(request):
+#	MostraCursos = CadastraCurso.objects.all()
+#	return render_to_response("cursos.html",{'ListaCurso': ListaCurso})
