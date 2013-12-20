@@ -40,7 +40,7 @@ def adiciona(request):
 			return render_to_response("salvo.html", {})	
 	else:
 		form = FormItemAgenda()
-	return render_to_response("adiciona.html",{'form':form},context_instance=RequestContext(request))	
+	return render_to_response("adiciona.html",{'form': form}, context_instance=RequestContext(request))	
 
 #def item(request, nr_item):
 #	try:
@@ -58,5 +58,4 @@ def item(request, nr_item):
 			return render_to_response("salvo.html", {})
 	else:
 		form = FormItemAgenda(instance=item)		
-	return render_to_response("item.html", {'form': form}, context_instance=RequestContext())	
-
+	return render_to_response("item.html", {'form': form}, context_instance=RequestContext(request))

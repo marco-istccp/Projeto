@@ -1,7 +1,8 @@
 #encoding: utf-8
 
-from django.forms import ModelForm
-from agenda.models import ItemAgenda
+#from django.forms import ModelForm
+from django  import forms
+from CenterClass.agenda.models import ItemAgenda
 
 class FormItemAgenda(forms.ModelForm):
 	data = forms.DateField(
