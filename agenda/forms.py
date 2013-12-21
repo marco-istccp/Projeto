@@ -1,7 +1,7 @@
 #encoding: utf-8
 
 #from django.forms import ModelForm
-from django  import forms
+from django import forms
 from CenterClass.agenda.models import ItemAgenda
 
 class FormItemAgenda(forms.ModelForm):

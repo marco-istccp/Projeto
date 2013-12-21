@@ -8,6 +8,8 @@ from models import ItemAgenda
 
 from forms import FormItemAgenda
 
+from django.shortcuts import get_object_or_404
+
 def lista(request):
 	lista_itens = ItemAgenda.objects.all()
 	return render_to_response("lista.html",
@@ -38,9 +40,11 @@ def adiciona(request):
 		if form.is_valid():
 			form.save()
 			return render_to_response("salvo.html", {})	
+
 	else:
 		form = FormItemAgenda()
-	return render_to_response("adiciona.html",{'form': form}, context_instance=RequestContext(request))	
+	return render_to_response("item.html", {'form': form},
+	context_instance=RequestContext(request))	
 
 #def item(request, nr_item):
 #	try:
@@ -50,12 +54,14 @@ def adiciona(request):
 #	return render_to_response('item.html', {'item': item})		
 
 def item(request, nr_item):
-	item = get_object_or_404(ItemAgenda, pk=nr_item) 
-	if request.method == "POST":
-		form = FormItemAgenda(request.POST, request.FILES, instance=item)
-		if form.is_valid():
-			form.save()
-			return render_to_response("salvo.html", {})
-	else:
-		form = FormItemAgenda(instance=item)		
-	return render_to_response("item.html", {'form': form}, context_instance=RequestContext(request))
+#	item = get_object_or_404(ItemAgenda, pk=nr_item) 
+#	if request.method == "POST":
+#		form = FormItemAgenda(request.POST, request.FILES, instance=item)
+#		if form.is_valid():
+#			form.save()
+#			return render_to_response("salvo.html", {})
+#	else:
+#		form = FormItemAgenda(instance=item)		
+#	return render_to_response("item.html", {'form': form}, context_instance=RequestContext(request))
+	item = get_object_or_404(ItemAgenda, pk=nr_item)
+	return render_to_response('item.html', {'item': item})
