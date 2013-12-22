@@ -1,8 +1,6 @@
 {% extends 'base.html' %}
 
-{% block corpo %}
-
-<link  href="{{ STATIC_URL }}css/bootstrap.css" rel="stylesheet">
+{% block cabecalho %}
 
 <div class="navbar-wrapper">
   <div class="container">
@@ -39,9 +37,13 @@
   </div><!-- /container -->
 </div><!-- /navbar wrapper -->
 
-<p>Dados salvos com sucesso!</p>
-<p><a href="/agenda">Cadastrar mais compromissos</a></p>
-<br>
-<p><a href="/">Home</a></p>
+{% endblock %}
+
+{% block corpo %}             
+
+<a href="#"><button class="btn btn-success">Dados salvos com sucesso!</button></a>
+
+<meta http-equiv="refresh" content="3;URL=/agenda">
+
 
 {% endblock %}
