@@ -7,11 +7,11 @@ def home(request):
 def sobre(request):
 	return render(request, 'sobre.html')
 
+def profilejr(request):
+	return render(request, 'profilejr.html')
+
+def profilemarco(request):
+	return render(request, 'profilemarco.html')		
+
 def ListaCursos(request):
-	return render(request, 'cursos.html')	
-
-#from models import CadastraCurso
-
-#def ListaCurso(request):
-#	MostraCursos = CadastraCurso.objects.all()
-#	return render_to_response("cursos.html",{'ListaCurso': ListaCurso})
+	return render(request, 'cursos.html')

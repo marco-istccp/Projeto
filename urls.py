@@ -15,6 +15,10 @@ urlpatterns = patterns('',
     
     url(r'^sobre/', 'CenterClass.core.views.sobre', name='sobre'),    
 
+    url(r'^profilejr/', 'CenterClass.core.views.profilejr', name='profilejr'),
+    
+    url(r'^profilemarco/', 'CenterClass.core.views.profilemarco', name='profilemarco'),
+
     #url(r'^cursos/', 'CenterClass.CadastraCurso.views.cursos', name='cursos'),
 
     url(r'^agenda/', 'CenterClass.agenda.views.lista', name='agenda'),    

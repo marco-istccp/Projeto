@@ -7,6 +7,9 @@
 
 <head>
 	<link  href="{{ STATIC_URL }}css/bootstrap.css" rel="stylesheet">
+  <link  href="{{ STATIC_URL }}css/bootstrap.min.css" rel="stylesheet">
+  <link  href="{{ STATIC_URL }}css/bootstrap-theme.css" rel="stylesheet">
+  <link  href="{{ STATIC_URL }}css/bootstrap-theme.min.css" rel="stylesheet">
 </head>
 
 <style type="text/css">
@@ -149,7 +152,7 @@ body {
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </a>
-        <a class="navbar-brand" href="#">CenterClass</a>
+        <a class="navbar-brand" href="/">CenterClass</a>
         </div>
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
@@ -157,9 +160,9 @@ body {
             <li><a href="/sobre" target="ext">About</a></li>
             <li><a href="#contact">Contact</a></li>
             <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Acesso rápido <b class="caret"></b></a>
               <ul class="dropdown-menu">
-                <li><a href="#">Action</a></li>
+                <li><a href="/agenda">Agenda</a></li>
                 <li><a href="#">Another action</a></li>
                 <li><a href="#">Something else here</a></li>
                 <li class="divider"></li>
@@ -190,8 +193,9 @@ body {
       <div class="container">
         <div class="carousel-caption">
           <h1>CenterClass é uma ferramenta para gestão do aprendizado</h1>
+          <p>Acessível para alunos e professores, mesmo que iniciantes em tecnologia</p>
           <pThis is an example layout with carousel that uses the Bootstrap 3 styles.</small></p>
-          <p><a class="btn btn-lg btn-primary" href="www.centerclass.com.br">Learn More</a>
+          <p><a class="btn btn-lg btn-primary" href="www.centerclass.com.br">Saiba mais</a>
         </p></div>
       </div>
     </div>
@@ -199,9 +203,9 @@ body {
       <img src="/media/imagens/alem_da_sala_de_aula.jpg">
       <div class="container">
         <div class="carousel-caption">
-          <h1>Changes to the Grid</h1>
-          <p>Bootstrap 3 still features a 12-column grid, but many of the CSS class names have completely changed.</p>
-          <p><a class="btn btn-large btn-primary" href="#">Learn more</a></p>
+          <h1>Você pode utilizá-lo em seu computador</h1>
+          <p>ou em outros dispositivos como tablets ou smartphones</p>
+          <p><a class="btn btn-large btn-primary" href="#">Saiba mais</a></p>
         </div>
       </div>
     </div>
@@ -209,9 +213,9 @@ body {
       <img src="/media/imagens/imagem.jpg">
       <div class="container">
         <div class="carousel-caption">
-          <h1>Percentage-based sizing</h1>
-          <p>With "mobile-first" there is now only one percentage-based grid.</p>
-          <p><a class="btn btn-large btn-primary" href="#">Browse gallery</a></p>
+          <h1>Alunos e professores podem utilizar</h1>
+          <p>potencializando o aprendizado e o ensino, respectivamente</p>
+          <p><a class="btn btn-large btn-primary" href="#">Saiba mais</a></p>
         </div>
       </div>
     </div>
@@ -237,21 +241,21 @@ body {
   <div class="row">
     <div class="col-md-4 text-center">
       <img class="img-circle" src="/media/imagens/internet-celular-540x348.jpg">
-      <h2>Mobile-first</h2>
-      <p>Tablets, phones, laptops. The new 3 promises to be mobile friendly from the start.</p>
-      <p><a class="btn btn-default" href="#">View details »</a></p>
+      <h2>Mobile também pode!</h2>
+      <p>Sim. Você pode utilizar seu celular para acessar atividades.</p>
+      <p><a class="btn btn-default" href="#">Detalhes</a></p>
     </div>
     <div class="col-md-4 text-center">
       <img class="img-circle" src="/media/imagens/Edumatica.jpg">
-      <h2>One Fluid Grid</h2>
-      <p>There is now just one percentage-based grid for Bootstrap 3. Customize for fixed widths.</p>
-      <p><a class="btn btn-default" href="#">View details »</a></p>
+      <h2>Interface amigável</h2>
+      <p>Mesmo professores não familiarizados com tecnologia pode utilizar facilmente.</p>
+      <p><a class="btn btn-default" href="#">Detalhes</a></p>
     </div>
     <div class="col-md-4 text-center">
       <img class="img-circle" src="/media/imagens/Whiteboard-Teacher-holding-ipad-with-student.png">
-      <h2>LESS is More</h2>
-      <p>Improved support for mixins make the new Bootstrap 3 easier to customize.</p>
-      <p><a class="btn btn-default" href="#">View details »</a></p>
+      <h2>O professor define as atividades do seu projeto</h2>
+      <p>E pode apoiar a fixação dos conceitos utilizando a ferramenta.</p>
+      <p><a class="btn btn-default" href="#">Detalhes</a></p>
     </div>
   </div><!-- /.row -->
 
@@ -262,24 +266,24 @@ body {
 
   <div class="featurette">
     <img class="featurette-image img-circle pull-right" src="/media/imagens/sua-escola.jpg">
-    <h2 class="featurette-heading">Responsive Design. <span class="text-muted">It'll blow your mind.</span></h2>
-    <p class="lead">In simple terms, a responsive web design figures out what resolution of device it's being served on. Flexible grids then size correctly to fit the screen.</p>
+    <h2 class="featurette-heading">Responsive layout. <span class="text-muted">Sim, é possível.</span></h2>
+    <p class="lead">Esta tecnologia permite que, independentemente do dispositivo, você possa acessar o conteúdo.</p>
   </div>
 
   <hr class="featurette-divider">
 
   <div class="featurette">
     <img class="featurette-image img-circle pull-left" src="/media/imagens/cursos-online-4.jpeg">
-    <h2 class="featurette-heading">Smaller Footprint. <span class="text-muted">Lightweight.</span></h2>
-    <p class="lead">The new Bootstrap 3 promises to be a smaller build. The separate Bootstrap base and responsive.css files have now been merged into one. There is no more fixed grid, only fluid.</p>
+    <h2 class="featurette-heading">Interação dos alunos. <span class="text-muted">Resultados mais rápidos.</span></h2>
+    <p class="lead">Funcionalidades de enquetes, por exemplo, podem gerar resultados imediatos ao professor.</p>
   </div>
 
   <hr class="featurette-divider">
 
   <div class="featurette">
     <img class="featurette-image img-circle pull-right" src="/media/imagens/escola-educacao.jpg">
-    <h2 class="featurette-heading">And lastly, this one. <span class="text-muted">Flatness.</span></h2>
-    <p class="lead">A big design trend for 2013 is "flat" design. Gone are the days of excessive gradients and shadows. Designers are producing cleaner flat designs, and Bootstrap 3 takes advantage of this minimalist trend.</p>
+    <h2 class="featurette-heading">O aluno pode acessar. <span class="text-muted">Apenas onde houver permissão.</span></h2>
+    <p class="lead">As permissões podem ser configuradas de forma a permitir o acesso dos usuários apenas a determinadas funcionalidades e cadastros.</p>
   </div>
 
   <hr class="featurette-divider">
@@ -293,25 +297,14 @@ body {
     <p>Marco Aurelio e Jésus Manhães - 2014 · <a href="www.centerclass.com.br">Conheça o CenterClass</a></p>
   </footer>
 
-</div><!-- /.container -->
-        
-       <!-- <script type='text/javascript' src="//ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script> -->
-
-
-       <!-- <script type='text/javascript' src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script> -->
+</div><!-- /.container -->           
        
        <script type='text/javascript' src="{{ STATIC_URL }}jquery/2.0.3/jquery.min.js"></script>
-
-       <script type='text/javascript' src="{{ STATIC_URL }}js/bootstrap.min.js"></script>
-
-        <!-- JavaScript jQuery code from Bootply.com editor -->
+       <script type='text/javascript' src="{{ STATIC_URL }}js/bootstrap.min.js"></script> 
         
-        <script type='text/javascript'>
-        
-        $(document).ready(function() {            
-        
-        });
-        
+        <script type='text/javascript'>        
+        $(document).ready(function() {        
+        });        
         </script>
 
 </body>
