@@ -27,6 +27,12 @@ urlpatterns = patterns('',
 
     url(r'^item/(?P<nr_item>\d+)/$', 'CenterClass.agenda.views.item'),    
 
+    (r'^login/$', 'django.contrib.auth.views.login',
+        {'template_name': 'login.html' }),
+
+    (r'^logout/$', 'django.contrib.auth.views.logout_then_login',
+        {'login_url': '/login/'}),    
+
     # Uncomment the admin/doc line below to enable admin documentation:
     #url(r'^admin/doc/', include('django.contrib.admindocs.urls'),    
 )
