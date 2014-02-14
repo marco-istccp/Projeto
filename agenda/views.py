@@ -11,7 +11,7 @@ from django.template import RequestContext
 @login_required
 def lista(request):
     lista_itens = ItemAgenda.objects.filter(usuario=request.user)
-    return render_to_response("lista.html", {'lista_itens': lista_itens})
+    return render_to_response("lista.html", {'lista_itens': lista_itens}, context_instance=RequestContext(request))
 
 
 @login_required
