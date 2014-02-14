@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 
 {% block cabecalho %}
-<body>
+
 <style>
   /* Remve the edge padding needed for mobile */
   .marketing {
@@ -66,12 +66,21 @@
 
 {% endblock %}
 
+
 {% block corpo %}
+
+<body>
+
 <div class="container">
-<form action="" method="POST">
-	{% csrf_token %}
-	{{ form.as_p }}	
-	<button type="submit"class="btn btn-default">Atualizar</button>
+
+<h1>Remover</h1>
+	
+	<h2>{{ item.titulo }}</h2>
+  <p>{{ item.data }} - {{ item.hora }}</p>
+  <pre>{{ item.descricao }}</pre>
+<form action="" method="POST"> 
+{% csrf_token %} 
+	<button type="submit"class="btn btn-default">Remover</button>
 </form>
 <br>
 <a href="/agenda"><button class="btn btn-default">Voltar</button></a>

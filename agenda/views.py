@@ -49,6 +49,8 @@ def remove(request, nr_item):
     item = get_object_or_404(ItemAgenda, usuario=request.user, id=nr_item)
     if request.method == "POST":
         item.delete()
-        return render_to_response("removido.html", {})
+    	return render_to_response("removido.html", {'item': item},
+    		context_instance=RequestContext(request))
     else:
-        return render_to_response("remove.html", {'item': item})
+        return render_to_response("remove.html", {'item': item},
+        	context_instance=RequestContext(request))

@@ -27,6 +27,8 @@ urlpatterns = patterns('',
 
     url(r'^item/(?P<nr_item>\d+)/$', 'CenterClass.agenda.views.item'),    
 
+    url(r'^remove/(?P<nr_item>\d+)/$', 'CenterClass.agenda.views.remove'),
+
     (r'^login/$', 'django.contrib.auth.views.login',
         {'template_name': 'login.html' }),
 

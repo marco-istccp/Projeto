@@ -46,7 +46,7 @@
 <ul>	
 {% for item in lista_itens %} <!-- lista_itens é um objeto do tipo render_to_response em views.py -->
 	<li>        
-        <a href="/remove/{{item.id}}">
+        <a href="/remove/{{item.id}}/">
         	<img src="/media/imagens/lixeira.png/">
         </a>
 		<a href="/item/{{ item.id }}">
