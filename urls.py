@@ -11,15 +11,12 @@ urlpatterns = patterns('',
     url(r'^admin/', include(admin.site.urls)),
 
     url(r'^$', 'CenterClass.core.views.home', name='home'),
-    # url(r'^CenterClass/', include('CenterClass.foo.urls')),
-    
+        
     url(r'^sobre/', 'CenterClass.core.views.sobre', name='sobre'),    
 
     url(r'^profilejr/', 'CenterClass.core.views.profilejr', name='profilejr'),
     
     url(r'^profilemarco/', 'CenterClass.core.views.profilemarco', name='profilemarco'),
-
-    #url(r'^cursos/', 'CenterClass.CadastraCurso.views.cursos', name='cursos'),
 
     url(r'^agenda/', 'CenterClass.agenda.views.lista', name='agenda'),    
 
@@ -35,8 +32,7 @@ urlpatterns = patterns('',
     (r'^logout/$', 'django.contrib.auth.views.logout_then_login',
         {'login_url': '/login/'}),    
 
-    # Uncomment the admin/doc line below to enable admin documentation:
-    #url(r'^admin/doc/', include('django.contrib.admindocs.urls'),    
+      
 )
 if settings.DEBUG:
 	urlpatterns += patterns('',
