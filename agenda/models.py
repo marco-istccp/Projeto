@@ -10,3 +10,6 @@ class ItemAgenda(models.Model):
 	titulo = models.CharField (max_length=100)
 	descricao = models.TextField()
 	usuario = models.ForeignKey(User)
+
+	def __unicode__(self):
+		return u"%s - %s %s" % (self.titulo, self.data, self.hora)

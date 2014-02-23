@@ -25,7 +25,7 @@ def adiciona(request):
             item.save()
 
             # Mensagem de formulário cadastrado
-            return render_to_response("salvo.html", {})
+            return render_to_response("salvo.html", {}, context_instance=RequestContext(request))
     else:
         # Exibe formulário em branco
         form = FormItemAgenda()
@@ -52,5 +52,4 @@ def remove(request, nr_item):
     	return render_to_response("removido.html", {'item': item},
     		context_instance=RequestContext(request))
     else:
-        return render_to_response("remove.html", {'item': item},
-        	context_instance=RequestContext(request))
+        return render_to_response("remove.html", {'item': item}, context_instance=RequestContext(request))
